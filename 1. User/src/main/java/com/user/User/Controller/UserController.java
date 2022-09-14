@@ -45,9 +45,9 @@ public class UserController
          return userService.getAllUsers();
     }
 
-//    @GetMapping("/findUserById/{id}")                        //http://localhost:8080/users/findUserById/100
-//    public Optional<User> findUserById(@PathVariable int id)
-//    {
-//        return userService.findUserById(id);
-//    }
+   @GetMapping("/findUserById/{id}")                        //http://localhost:8080/users/findUserById/100
+   public Optional<User> findUserById(@PathVariable int id)
+   {
+       return userService.findUserById(id);
+   }
 }
