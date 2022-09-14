@@ -15,7 +15,9 @@ public class UserService
 {
     @Autowired
     private RestTemplate restTemplate;
-
+    
+   /* Connecting ewallet microservice to Apache Kakfa to send notification after transaction completion */ 
+   
     @Autowired
     private KafkaTemplate<String,String> kafkaTemplate;
 
@@ -25,6 +27,8 @@ public class UserService
      kafkaTemplate.send(kafkaTopic,content);
     }
 
+    /* Interaction with get API of another microservice i.e User to verify if sender & receiver both exists or not */
+    
     public User findUserById(int userid){
        // String url = "http://localhost:8080/users/findUser/{id}";
          String url = "http://user-service/users/findUser/{id}";
@@ -42,7 +46,7 @@ public class UserService
                 return responseEntity.getBody();
             }
         }catch(Exception exception){
-            System.out.println("nnnnnnnnnnnnnnnnnnnnnnnnnnnn");
+            System.out.println("Some Error while getting User ID from another microservice ");
             System.out.println(exception);
             return null;
         }
