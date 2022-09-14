@@ -1,4 +1,5 @@
 # E- Wallet ( Java Backend Development )
+[ ewallet & user - main microservices ] & [ CommunicationService & EurekaServiceDiscovery are utility microservice ]
 * Developed a Scalable & Robust Web App (Microservices) for an e-wallet (like Paytm) App
 * It has all the standard functionalities that any e-wallet can have 
 
