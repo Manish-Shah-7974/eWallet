@@ -24,8 +24,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         but
           here we are  Getting records from Mysql using JPA to get username , password & associated roles assigned to them  */
     
-    // Authorization : What to Access ?
     
+    // Authorization : What to Access ?
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests().antMatchers("/transaction/getBalance/").hasRole("CUST")
